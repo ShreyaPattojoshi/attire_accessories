@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handmade Jewellery</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background: #6a5acd;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('background.jpg') no-repeat center center/cover;
+      padding: 80px 20px;
+      text-align: center;
+      color: #6a5acd; /* lavender text */
+      border-radius: 12px;
+      margin: 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.6); /* light overlay for readability */
+      border-radius: 12px;
+    }
+
+    .hero * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Products Section */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      margin: 5px 0;
+      color: #6a5acd;
+      font-weight: bold;
+    }
+
+    .product button {
+      background: #6a5acd;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .product button:hover {
+      background: #836fff;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .contact-form button {
+      background: #6a5acd;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #836fff;
+    }
+
+    footer {
+      background: #6a5acd;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: linear-gradient(to bottom, #fcdada, #ede7f6); font-family: 'Times New Roman', serif; border-top: 3px solid purple;">
+    <h1 style="margin: 0; font-size: 32px; color: #6a1b9a;">Attire Accessories</h1>
+    <nav>
+        <a href="#rings" style="margin: 0 15px; text-decoration: none; color: #6a1b9a; font-weight: bold;">Rings</a>
+        <a href="#earrings" style="margin: 0 15px; text-decoration: none; color: #6a1b9a; font-weight: bold;">Earrings</a>
+        <a href="#bracelets" style="margin: 0 15px; text-decoration: none; color: #6a1b9a; font-weight: bold;">Bracelets</a>
+        <a href="#necklaces" style="margin: 0 15px; text-decoration: none; color: #6a1b9a; font-weight: bold;">Necklaces</a>
+        <a href="#hair" style="margin: 0 15px; text-decoration: none; color: #6a1b9a; font-weight: bold;">Hair Accessories</a>
+    </nav>
+</header>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="logo.png" alt="Logo" class="hero-logo">
+    <h1>Handmade Jewellery for Every Occasion</h1>
+    <p>Elegant, unique and crafted with love.</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <div class="product">
+      <img src="rings.jpg" alt="ring">
+      <h3>rings</h3>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="necklace.jpg" alt="Necklace">
+      <h3>necklace</h3>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="bracelets.jpg" alt="Bracelet">
+      <h3>Bracelet</h3>
+      <p>₹399</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="earrings.jpg" alt="Earrings">
+      <h3>Earrings</h3>
+      <p>₹199</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="hair.jpg" alt="Hair Accessories">
+      <h3>Hair Accessories</h3>
+      <p>₹199</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="4" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Attire Accessories. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
